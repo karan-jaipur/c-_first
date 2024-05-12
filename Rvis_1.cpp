@@ -31,7 +31,7 @@ int main (){
     // cout<<"give a sec no";
     // cin>>b;
     
-    // if(a==b){
+    // if(a==b){                        
     //     cout<<"match";
     // }else{
     //     cout<<"not match";
