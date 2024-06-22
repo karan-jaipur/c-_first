@@ -1,26 +1,22 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    vector<int> arr = {1000,200,51,78,98};
-    int n = arr.size();
+      vector <int> arr={1,3,5,7,9};
 
-    int select;
-    cout<<"Enter yor number 0 and 1";
-    cin>>select;
+  int var;
+  cout<<"sect one of these:-"<<endl;
+  cout<<"1. low to high"<<endl;
+  cout<<"2. high to low"<<endl;
+  cin>>var;
 
+  if(var == 1){
+    sort(arr.begin(),arr.end());
 
-    if(select==0){
-        sort(arr.begin(),arr.end());
-    }
-    else if(select==1){
-        sort(arr.rbegin(),arr.rend());
-    }
-
-    for(int i=0; i<n; i++){
-        cout<<arr[i];
-    }
-
+  }else if(var==2){
+    sort(arr.rbegin(),arr.rend());
+  }
+  for(int i=0;i<arr.size();i++){
+    cout<<arr[i];
+  }
 }

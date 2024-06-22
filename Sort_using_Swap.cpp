@@ -1,44 +1,39 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
+
 int main(){
-vector<int> arr = {1000,200,51,78,98};
-    int n = arr.size();
+  vector <int> arr={1,3,5,7,9};
 
-    int select;
-    cout<<"Enter yor number 0 and 1";
-    cin>>select;
+  int var;
+  cout<<"sect one of these:-"<<endl;
+  cout<<"1. low to high"<<endl;
+  cout<<"2. high to low"<<endl;
+  cin>>var;
 
-
-    if(select==0){
-       for(int i=0; i<arr.size();i++){
-    for(int j=i+1; j<arr.size(); j++){
-      if(arr[j]<arr[i]){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+      if(var==1){
+        
+  for(int i=0;i<arr.size();i++){
+    for(int j=i+1;j<arr.size();j++){
+        if(arr[j]<arr[i]){
+          int temp=arr[i];
+          arr[i]=arr[j];
+          arr[j]=temp;
+        }
       }
     }
   }
-    }
-    else if(select==1){
-        for(int i=0; i<arr.size();i++){
-    for(int j=i+1; j<arr.size(); j++){
-      if(arr[j]>arr[i]){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+  else if(var==2){
+    for(int i=0;i<arr.size();i++){
+      for(int j=0;j<arr.size();j++){
+        if(arr[i]>arr[j]){
+          int temp=arr[i];
+          arr[i]=arr[j];
+          arr[j]=temp;
+        }
       }
     }
   }
-    }
-
-    for(int i=0; i<n; i++){
-        cout<<arr[i];
-    }
-
+   for(int i=0;i<arr.size();i++){
+    cout<<arr[i];
+   }
 }
-
-
-
